@@ -20,5 +20,11 @@ set undofile
 
 au! BufRead,BufNewFile *.R    setfiletype r
 
-"vimfilerをデフォルトに
+" vimfilerをデフォルトに
 let g:vimfiler_as_default_explorer = 1
+
+" calendarの設定
+" 週始まりを月曜日に
+let g:calendar_monday = 1
+" 週番号を表示
+let g:calendar_weeknm = 1
