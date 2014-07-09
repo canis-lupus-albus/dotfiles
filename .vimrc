@@ -1,7 +1,7 @@
 set ambiwidth=double
 set backspace=start,eol,indent
-set cursorline
 set hlsearch
+set iminsert=0
 set laststatus=2
 set mouse=a
 set nocompatible
@@ -11,6 +11,8 @@ set ruler
 set shiftwidth=4
 set showcmd
 set tabstop=4
+set autoindent
+set smartindent
 
 syntax on
 
