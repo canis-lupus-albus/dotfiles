@@ -7,7 +7,13 @@ alias du="du -k"
 set -o vi
 
 # gitの補完
-source /opt/local/share/git/contrib/completion/git-completion.bash
+if [ -f /opt/local/share/git/contrib/completion/git-completion.bash ]
+then
+	source /opt/local/share/git/contrib/completion/git-completion.bash
+fi
 
 # tmuxの補完
-source ~/.dotfiles/bash_completion_tmux.sh
+if [ -f ~/.dotfiles/bash_completion_tmux.sh ]
+then
+	source ~/.dotfiles/bash_completion_tmux.sh
+fi
