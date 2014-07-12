@@ -3,6 +3,7 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 alias du="du -k"
+alias ag="ag --pager 'less -R'"
 
 set -o vi
 
