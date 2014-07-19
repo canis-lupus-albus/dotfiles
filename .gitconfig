@@ -1,0 +1,12 @@
+[color]
+	ui = auto
+[merge]
+	ff = false
+[push]
+	default = simple
+[alias]
+	lg = log --graph  --decorate=full
+[pull]
+	ff = only
+[include]
+	path = ~/.gitconfig.local
