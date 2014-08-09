@@ -5,7 +5,7 @@ alias mv="mv -i"
 alias du="du -k"
 alias ag="ag --pager 'less -R'"
 
-set -o vi
+#set -o vi
 
 # gitの補完
 if [ -f /opt/local/share/git/contrib/completion/git-completion.bash ]
