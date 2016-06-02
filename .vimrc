@@ -27,16 +27,18 @@ call dein#begin(expand('~/.vim/dein'))
 
 " Let dein manage dein
 " Required:
-call dein#add('Shougo/dein.vim')
+call dein#add(expand('~/.vim/dein/repos/github.com/Shougo/dein.vim'))
 
 " Add or remove your plugins here:
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimfiler.vim')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+call dein#add('Shougo/neomru.vim')
 call dein#add('jlanzarotta/bufexplorer')
 call dein#add('mattn/calendar-vim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('rking/ag.vim')
+call dein#add('ctrlpvim/ctrlp.vim')
 
 " Required:
 call dein#end()
@@ -65,3 +67,15 @@ let g:vimfiler_as_default_explorer = 1
 let g:calendar_monday = 1
 " 週番号を表示
 let g:calendar_weeknm = 1
+
+let g:ctrlp_cmd = 'CtrlPMRUFile'
+if executable('ag')
+	let g:ctrlp_use_caching=0
+	let g:ctrlp_user_command='ag %s -i --nocolor --nogroup -g ""'
+endif
+
+if executable('ag')
+	let g:unite_source_grep_command = 'ag'
+	let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+	let g:unite_source_grep_recursive_opt = ''
+endif
