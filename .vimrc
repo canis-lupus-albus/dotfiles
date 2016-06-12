@@ -27,7 +27,7 @@ call dein#begin(expand('~/.vim/dein'))
 
 " Let dein manage dein
 " Required:
-call dein#add(expand('~/.vim/dein/repos/github.com/Shougo/dein.vim'))
+call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
 call dein#add('Shougo/unite.vim')
